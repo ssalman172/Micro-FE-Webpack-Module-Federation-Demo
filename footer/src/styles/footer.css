@@ -1,0 +1,36 @@
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 235px;
+  background: #393E46;
+  color: #eee;
+  padding: 2% 3%;
+}
+
+.section-wrapper {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.section-title {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.section-wrapper ul {
+  padding: 0;
+}
+
+.sub-section {
+  list-style: none;
+}
+
+.sub-section a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.sub-section a:hover {
+  text-decoration: underline;
+}
