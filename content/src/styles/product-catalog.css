@@ -43,8 +43,19 @@ main {
   margin-bottom: 5px;
 }
 
-.product-desc {
-  margin-top: 20px;
+.buy-btn:hover {
+  background: #476072;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buy-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background: #548CA8;
+  color: #eee;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
 .general-credential {

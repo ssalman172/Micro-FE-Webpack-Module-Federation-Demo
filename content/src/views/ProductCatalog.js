@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/product-catalog.css";
 import { useState, useEffect } from "react";
+import PubSub from 'pubsub-js'
 
 const ProductCatalog = () => {
   const [products, setProducts] = useState([]);
@@ -13,6 +14,14 @@ const ProductCatalog = () => {
     fetchData();
   }, []);
 
+  let topic = "ini topik"
+  const publishTopic = () => {
+    if (PubSub.countSubscriptions(topic) !== 0) {
+      PubSub.publish(topic);
+    } else {
+      alert("Not subscribed.");
+    }
+  }
   return (
     <main>
       <h1 className="page-title">Daftar Produk</h1>
@@ -37,7 +46,10 @@ const ProductCatalog = () => {
                 <p className="credential">Stock</p>
                 <p>: {item.stock}</p>
               </div>
-              <p className="product-desc">{item.description}</p>
+              <div style={{ marginTop: 20, paddingRight: 30 }} className="general-credential">
+                <p>{item.description}</p>
+                <button onClick={publishTopic} className='buy-btn'>CEK STATUS SUBSCRIBE</button>
+              </div>
             </div>
             <img src={item.thumbnail} />
           </div>
