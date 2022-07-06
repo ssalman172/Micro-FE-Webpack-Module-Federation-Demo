@@ -1,5 +1,5 @@
 module.exports = app => {
-  const products = require("../controllers/productController.js");
+  const products = require("../controllers/productController");
   let router = require("express").Router();
   // Create a new Product
   router.post("/", products.create);
