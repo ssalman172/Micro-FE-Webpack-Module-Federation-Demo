@@ -24,7 +24,10 @@ const ProductCatalog = () => {
   }
   return (
     <main>
-      <h1 className="page-title">Daftar Produk</h1>
+      <div className="page-title">
+        <h1>Daftar Produk</h1>
+        <button onClick={publishTopic} className='buy-btn'>CEK STATUS SUBSCRIBE</button>
+      </div>
       {products.map(item => {
         return (
           <div key={item.id} className="product-card">
@@ -48,7 +51,6 @@ const ProductCatalog = () => {
               </div>
               <div style={{ marginTop: 20, paddingRight: 30 }} className="general-credential">
                 <p>{item.description}</p>
-                <button onClick={publishTopic} className='buy-btn'>CEK STATUS SUBSCRIBE</button>
               </div>
             </div>
             <img src={item.thumbnail} />
